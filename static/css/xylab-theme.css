@@ -1,0 +1,881 @@
+:root {
+  --xylab-blue: #2a607d;
+  --xylab-blue-dark: #214f69;
+  --xylab-blue-text: #315f78;
+  --xylab-pink: #e7c8d1;
+  --xylab-blue-soft: #eef1f7;
+  --xylab-yellow: #f4d45d;
+  --xylab-ink: #171717;
+  --xylab-text: #3f4d56;
+  --xylab-line: #dfe4e8;
+  --xylab-page-width: 1120px;
+}
+
+html,
+body {
+  overflow-x: hidden !important;
+  background: #ffffff;
+}
+
+#app {
+  background: #ffffff;
+  color: var(--xylab-text);
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.65;
+  text-align: left;
+}
+
+/* Header: keep the existing menu behavior and replace only its visual shell. */
+#head {
+  width: 100%;
+  height: auto !important;
+  min-height: 88px;
+  background: #ffffff !important;
+  border-bottom: 1px solid var(--xylab-line);
+  box-shadow: 0 2px 12px rgba(33, 79, 105, 0.08);
+}
+
+#head > div {
+  width: 100% !important;
+}
+
+#head > div > div {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: var(--xylab-page-width);
+  min-height: 88px;
+  margin: 0 auto;
+  padding: 10px 28px;
+  flex-wrap: nowrap !important;
+  justify-content: space-between !important;
+  gap: 28px !important;
+}
+
+.titlePre {
+  box-sizing: border-box;
+  flex: 0 0 230px;
+  width: 230px;
+  height: 64px;
+  margin: 0 !important;
+  padding: 0;
+  overflow: hidden;
+  /* The supplied PNG contains generous white margins; enlarge it inside the
+     fixed header box so the visible logo matches the reference template. */
+  background: url("/xylab-strikingly-logo-2026-10-05/logo-1-primary.png") center / 270px 135px no-repeat;
+  color: transparent !important;
+  font-size: 0 !important;
+  line-height: 0;
+}
+
+.titlePre > * {
+  visibility: hidden;
+}
+
+.el-menu-demo {
+  box-sizing: border-box;
+  flex: 1 1 auto !important;
+  width: auto !important;
+  max-width: 760px;
+  height: 64px !important;
+  margin: 0 !important;
+  gap: 4px !important;
+  justify-content: flex-end !important;
+  background: transparent !important;
+}
+
+.el-menu-demo.el-menu--horizontal {
+  border-bottom: 0 !important;
+}
+
+.el-menu-demo .el-menu-item {
+  width: auto !important;
+  height: 64px;
+  margin: 0 !important;
+  padding: 0 15px !important;
+  border-bottom: 3px solid transparent !important;
+  background: transparent !important;
+  color: var(--xylab-blue-text) !important;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 64px;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+.el-menu-demo .el-menu-item:hover,
+.el-menu-demo .el-menu-item.is-active {
+  border-bottom-color: var(--xylab-yellow) !important;
+  color: var(--xylab-blue-dark) !important;
+}
+
+.dropdown-button {
+  border: 0 !important;
+  border-radius: 3px;
+  background: var(--xylab-blue) !important;
+  color: #ffffff !important;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.dropdown-list {
+  right: 0;
+  left: auto;
+  width: 150px !important;
+  margin-top: 8px !important;
+  border: 1px solid var(--xylab-line) !important;
+  border-radius: 3px;
+  box-shadow: 0 8px 24px rgba(33, 79, 105, 0.16);
+  color: var(--xylab-blue-dark) !important;
+  font-size: 15px;
+}
+
+.dropdown-list li {
+  padding: 9px 14px !important;
+}
+
+.dropdown-list li:hover {
+  background: var(--xylab-blue-soft) !important;
+}
+
+#body {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#body > .container,
+#body > .members,
+#body > #publications,
+#body > #software-database,
+#body > .news,
+#body > .photo-wall,
+#body > #teachers {
+  box-sizing: border-box;
+  width: calc(100% - 48px) !important;
+  max-width: var(--xylab-page-width);
+  margin: 36px auto 72px !important;
+}
+
+.titles {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--xylab-ink) !important;
+  font-family: "Lato", Arial, sans-serif !important;
+  font-size: 34px !important;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center !important;
+}
+
+/* Preserve the existing separator elements while giving them the template accent. */
+.titles + div[style*="border: 3px"] {
+  width: 72px !important;
+  height: 4px;
+  margin: 16px auto 34px;
+  border: 0 !important;
+  background: var(--xylab-yellow);
+}
+
+a {
+  color: var(--xylab-blue) !important;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--xylab-blue-dark) !important;
+}
+
+/* Home */
+/* 仅首页取消旧版正文偏移；下方内容仍保留原来的居中阅读宽度。 */
+#body:has(> .container) {
+  margin: 0 !important;
+}
+
+#body > .container {
+  --home-title-size: clamp(36px, 5vw, 72px);
+  margin-top: 0 !important;
+}
+
+#body > .container > .memory-box:first-child {
+  box-sizing: border-box;
+  position: relative;
+  isolation: isolate;
+  /* 图片最多宽 1200px，保持原图比例，并相对正文居中。 */
+  width: min(1200px, calc(100vw - 48px)) !important;
+  aspect-ratio: 1672 / 941;
+  margin: 0 calc(50% - min(600px, calc(50vw - 24px))) 34px !important;
+  padding: 52px 28px !important;
+  overflow: hidden;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: #343b42 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#body > .container > .memory-box:first-child::before,
+#body > .container > .memory-box:first-child::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+#body > .container > .memory-box:first-child::before {
+  /* 只模糊背景，稍微外扩以免模糊边缘露白；原始拼贴图保持不变。 */
+  inset: -6px;
+  z-index: -2;
+  background: url("/static/img/home-welcome.jpg") center / cover no-repeat;
+  filter: blur(2px);
+}
+
+#body > .container > .memory-box:first-child::after {
+  inset: 0;
+  z-index: -1;
+  background: rgba(18, 27, 37, 0.4);
+}
+
+.home-title-host,
+.home-title-fallback {
+  width: 100%;
+  max-width: 1120px;
+  text-align: center;
+}
+
+.home-title-fallback,
+.xylab-elastic-lettering {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Lato", Arial, sans-serif;
+  font-size: var(--home-title-size);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.45);
+}
+
+.xylab-elastic-lettering {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+#body > .container > div:nth-child(2),
+#body > .container > div:nth-child(3) {
+  box-sizing: border-box;
+  width: 100% !important;
+  margin: 0 0 34px !important;
+  padding: 48px 56px;
+}
+
+#body > .container > div:nth-child(2) {
+  background: var(--xylab-pink);
+}
+
+#body > .container > div:nth-child(3) {
+  background: var(--xylab-blue-soft);
+}
+
+#body > .container > div:nth-child(2) .titles,
+#body > .container > div:nth-child(3) .titles {
+  margin-bottom: 20px !important;
+}
+
+#body > .container > div:nth-child(2) .titles + div,
+#body > .container > div:nth-child(3) .titles + div {
+  display: none;
+}
+
+#body > .container > div:nth-child(2) p,
+#body > .container > div:nth-child(3) p {
+  margin: 8px 0 !important;
+  color: var(--xylab-blue-text);
+  font-family: "Lato", Arial, sans-serif !important;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+#body > .container > div:nth-child(3) p b {
+  color: var(--xylab-ink);
+  font-size: 20px;
+}
+
+#body > .container > div:nth-child(3) a {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 22px;
+  border-radius: 3px;
+  background: var(--xylab-blue);
+  color: #ffffff !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Join-us cards inside the home page. */
+#body > .container .card.join-card,
+#body > .container .card.contact-card {
+  box-sizing: border-box;
+  border: 0 !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+}
+
+#body > .container .card.join-card {
+  background: var(--xylab-pink) !important;
+  color: var(--xylab-blue-dark) !important;
+}
+
+#body > .container .card.contact-card {
+  background: var(--xylab-blue) !important;
+}
+
+/* Members */
+.members .memory-box {
+  box-sizing: border-box;
+  margin: 0 auto 34px !important;
+  padding: 0 28px 34px !important;
+  overflow: hidden;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--xylab-blue-soft);
+}
+
+.members .top-bar {
+  box-sizing: border-box !important;
+  width: calc(100% + 56px) !important;
+  margin: 0 -28px 26px !important;
+  padding: 22px 24px !important;
+  background: #ffffff !important;
+  color: var(--xylab-ink) !important;
+  font-size: 31px !important;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center !important;
+}
+
+.members .top-bar::after {
+  display: block;
+  width: 64px;
+  height: 4px;
+  margin: 14px auto 0;
+  background: var(--xylab-yellow);
+  content: "";
+}
+
+.members {
+  --member-photo-width: 120px;
+  --member-photo-height: 160px;
+  --member-columns: var(--member-photo-width) minmax(0, 1fr) var(--member-photo-width) minmax(0, 1fr);
+  --member-padding: 24px;
+  --member-gap: 24px;
+}
+
+/* 按结构覆盖所有成员行：部分校友及手机端条目没有 .card 类。
+   每行依次是照片、介绍、照片、介绍；去掉旧的固定高度与宽度，
+   让两位成员各占一半，长介绍自然撑高所在行。PI 使用下方独立布局。 */
+.members > .memory-box:not(:first-child) > div:not(.top-bar) > div {
+  box-sizing: border-box;
+  display: grid !important;
+  grid-template-columns: var(--member-columns);
+  align-items: start;
+  gap: var(--member-gap);
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0;
+  min-width: 0;
+  margin: 0 !important;
+  padding: var(--member-padding) !important;
+  background: #ffffff;
+}
+
+.members > .memory-box:not(:first-child) > div:not(.top-bar) {
+  box-sizing: border-box;
+  width: 100% !important;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr) !important;
+  margin: 0 !important;
+}
+
+.members > .memory-box:not(:first-child) > div > div > img {
+  display: block;
+  width: var(--member-photo-width) !important;
+  height: var(--member-photo-height) !important;
+  margin: 0 !important;
+}
+
+.members > .memory-box:not(:first-child) > div > div > div {
+  box-sizing: border-box;
+  width: auto !important;
+  min-width: 0;
+  height: auto !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.members > .memory-box:not(:first-child) pre {
+  box-sizing: border-box;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.members .name {
+  padding: 0;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.members img {
+  object-fit: cover;
+}
+
+.members .name,
+.members .teacherName {
+  color: var(--xylab-blue) !important;
+}
+
+.members pre {
+  max-width: 100%;
+  color: var(--xylab-text);
+  overflow-wrap: anywhere;
+  white-space: pre-line;
+}
+
+.members > .memory-box:first-child > div:nth-child(2) {
+  box-sizing: border-box;
+  display: block !important;
+  width: 100%;
+  margin-left: 0 !important;
+}
+
+.members > .memory-box:first-child > div:nth-child(2) > div {
+  display: grid !important;
+  grid-template-columns: 240px minmax(0, 440px);
+  align-items: start;
+  justify-content: center;
+  gap: 38px;
+}
+
+.members > .memory-box:first-child > div:nth-child(2) img {
+  box-sizing: border-box;
+  width: 240px !important;
+  height: 320px !important;
+  margin: 0 !important;
+}
+
+.members > .memory-box:first-child pre {
+  box-sizing: border-box;
+  width: 100% !important;
+  margin: 0 !important;
+}
+
+/* Publications */
+#publications > div[style*="font-size: 20px"] {
+  margin-bottom: 28px !important;
+  color: var(--xylab-blue-text);
+  text-align: center !important;
+}
+
+#publications .box {
+  box-sizing: border-box;
+  padding: 0 !important;
+}
+
+#publications .box .title {
+  box-sizing: border-box;
+  margin: 0 0 18px !important;
+  padding: 22px 24px;
+  border-left: 5px solid var(--xylab-yellow);
+  background: var(--xylab-blue-soft);
+  color: var(--xylab-text);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+#publications .box .content,
+#publications .box a {
+  font-size: 18px !important;
+}
+
+#publications .box .title1 {
+  color: var(--xylab-blue-dark) !important;
+}
+
+#publications .bull {
+  color: var(--xylab-blue);
+}
+
+/* Software and database cards */
+#software-database .card {
+  box-sizing: border-box;
+  gap: 38px;
+  margin: 0 0 34px !important;
+  padding: 30px;
+  border: 1px solid var(--xylab-line);
+  background: #ffffff;
+}
+
+#software-database .card:nth-of-type(even) {
+  background: var(--xylab-blue-soft);
+}
+
+#software-database .card-left {
+  width: 50%;
+}
+
+#software-database .card-left .el-image,
+#software-database .card-left img {
+  display: block;
+  width: 100%;
+}
+
+#software-database .card-right {
+  margin-left: 0 !important;
+}
+
+#software-database .card-right p {
+  color: var(--xylab-text);
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+#software-database .title-span {
+  color: var(--xylab-ink) !important;
+  font-size: 30px !important;
+  font-weight: 700;
+}
+
+#software-database .card-right a {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 5px 11px;
+  border-radius: 3px;
+  background: var(--xylab-blue);
+  color: #ffffff !important;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* News */
+.news > div:last-child {
+  box-sizing: border-box;
+  padding: 34px 44px;
+  background: var(--xylab-blue-soft);
+}
+
+.news p {
+  color: var(--xylab-text);
+  font-size: 18px !important;
+  line-height: 1.65;
+}
+
+.news p b {
+  color: var(--xylab-blue-dark);
+  font-size: 20px !important;
+}
+
+/* Activities */
+.activities-carousel-host {
+  width: 100%;
+  height: clamp(460px, 70vh, 680px);
+  color: var(--xylab-blue-dark);
+}
+
+/* 对应提供源码的根节点 Tailwind 布局，限定在轮播内，不引入全局样式重置。 */
+.xylab-concave-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  overflow: hidden;
+  outline: none;
+}
+
+.xylab-concave-carousel:focus-visible {
+  outline: 2px solid var(--xylab-blue);
+  outline-offset: -2px;
+}
+
+.xylab-concave-carousel button {
+  font: inherit;
+}
+
+/* 照片完成懒加载后再淡入，保留原来的点击放大功能。 */
+.photo-wall .photo.is-loaded,
+.photo-wall .modal {
+  animation: activity-photo-fade-in 450ms ease-out;
+}
+
+@keyframes activity-photo-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 尊重系统的减少动态效果设置，照片仍正常显示。 */
+@media (prefers-reduced-motion: reduce) {
+  .photo-wall .photo,
+  .photo-wall .modal {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .photo-wall .photo:hover {
+    transform: none;
+  }
+}
+
+.photo-wall {
+  padding: 0 !important;
+}
+
+.photo-row {
+  width: 100%;
+  max-width: none !important;
+  gap: 24px !important;
+}
+
+.photo-item {
+  box-sizing: border-box;
+  width: calc(33.333% - 16px) !important;
+  height: 260px !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: var(--xylab-blue-soft);
+}
+
+/* Resume/teacher page */
+#teachers .titles,
+#teachers h4 {
+  color: var(--xylab-ink) !important;
+}
+
+#teachers h4 {
+  box-sizing: border-box;
+  padding: 12px 18px;
+  background: var(--xylab-blue-soft) !important;
+  border-left: 5px solid var(--xylab-yellow);
+}
+
+/* Footer */
+#foot {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20px 24px !important;
+  background: var(--xylab-blue-dark) !important;
+}
+
+#foot pre,
+#foot b {
+  font-family: "Lato", Arial, sans-serif !important;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 900px) {
+  #head > div > div {
+    padding: 9px 20px;
+    gap: 16px !important;
+  }
+
+  .titlePre {
+    flex-basis: 190px;
+    width: 190px;
+    height: 56px;
+  }
+
+  .el-menu-demo .el-menu-item {
+    padding: 0 9px !important;
+    font-size: 14px;
+  }
+
+  #body > .container > div:nth-child(2),
+  #body > .container > div:nth-child(3) {
+    padding: 38px 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  #app {
+    font-size: 16px;
+  }
+
+  #head {
+    min-height: 72px;
+  }
+
+  #head > div > div {
+    min-height: 72px;
+    padding: 8px 18px;
+  }
+
+  .titlePre {
+    flex: 0 1 175px;
+    width: 175px;
+    height: 52px;
+    background-size: 220px 110px;
+  }
+
+  .dropdown-container {
+    margin-left: auto !important;
+  }
+
+  #body {
+    margin: 0 !important;
+  }
+
+  #body > .container,
+  #body > .members,
+  #body > #publications,
+  #body > #software-database,
+  #body > .news,
+  #body > .photo-wall,
+  #body > #teachers {
+    width: calc(100% - 32px) !important;
+    margin: 24px auto 52px !important;
+  }
+
+  .titles {
+    font-size: 28px !important;
+  }
+
+  .members .top-bar {
+    font-size: 26px !important;
+  }
+
+  #body > .container > .memory-box:first-child {
+    width: 100% !important;
+    margin: 0 0 34px !important;
+    padding: 36px 22px !important;
+  }
+
+  #body > .container {
+    /* 手机图片区域同样紧接导航栏。 */
+    margin-top: 0 !important;
+  }
+
+  #body > .container {
+    --home-title-size: clamp(34px, 10vw, 46px);
+  }
+
+  #body > .container > div:nth-child(2),
+  #body > .container > div:nth-child(3) {
+    padding: 32px 24px;
+  }
+
+  #body > .container > div:nth-child(2) p,
+  #body > .container > div:nth-child(3) p {
+    font-size: 17px;
+  }
+
+  #body > .container .container {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  #body > .container .card.contact-card,
+  #body > .container .card.join-card {
+    width: 100% !important;
+    margin: 14px auto !important;
+  }
+
+  .members .memory-box {
+    padding: 0 16px 24px !important;
+  }
+
+  .members .top-bar {
+    width: calc(100% + 32px) !important;
+    margin: 0 -16px 20px !important;
+  }
+
+  .members {
+    --member-photo-width: 98px;
+    --member-photo-height: 130px;
+    --member-columns: var(--member-photo-width) minmax(0, 1fr);
+    --member-padding: 22px 12px;
+    --member-gap: 16px;
+  }
+
+  .members > .memory-box:not(:first-child) pre {
+    font-size: 14px;
+  }
+
+  .members > .memory-box:first-child pre {
+    width: 100% !important;
+    margin-top: 18px !important;
+    padding: 0 8px;
+    font-size: 15px !important;
+  }
+
+  .members > .memory-box:first-child > div:nth-child(2) > div {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    gap: 18px;
+  }
+
+  .members > .memory-box:first-child > div:nth-child(2) img {
+    width: min(225px, 100%) !important;
+    height: auto !important;
+  }
+
+  #publications .box .title {
+    padding: 18px 16px;
+  }
+
+  #publications .box .content,
+  #publications .box a {
+    font-size: 16px !important;
+  }
+
+  #software-database .card {
+    gap: 12px;
+    padding: 18px;
+  }
+
+  #software-database .card-left {
+    width: 100%;
+  }
+
+  #software-database .card-right {
+    margin: 0 !important;
+  }
+
+  #software-database .card-right p {
+    font-size: 16px;
+  }
+
+  .news > div:last-child {
+    padding: 24px 20px;
+  }
+
+  .photo-row {
+    gap: 18px !important;
+  }
+
+  .photo-item {
+    width: 100% !important;
+    height: 230px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .titlePre {
+    flex-basis: 175px;
+    width: 175px;
+    height: 46px;
+    background-size: 240px 120px;
+  }
+
+  .dropdown-button {
+    padding: 9px 12px !important;
+  }
+
+  #foot {
+    padding: 18px 16px !important;
+  }
+}

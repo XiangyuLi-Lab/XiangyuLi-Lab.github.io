@@ -1,0 +1,7 @@
+node_modules/
+.pnpm-store/
+picture/
+.env
+.env.*
+!.env.example
+.DS_Store
