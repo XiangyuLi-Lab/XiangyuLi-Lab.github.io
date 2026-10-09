@@ -56,15 +56,14 @@ body {
 
 .titlePre {
   box-sizing: border-box;
-  flex: 0 0 230px;
-  width: 230px;
+  flex: 0 0 140px;
+  width: 140px;
   height: 64px;
   margin: 0 !important;
   padding: 0;
   overflow: hidden;
-  /* The supplied PNG contains generous white margins; enlarge it inside the
-     fixed header box so the visible logo matches the reference template. */
-  background: url("/xylab-strikingly-logo-2026-10-05/logo-1-primary.png") center / 270px 135px no-repeat;
+  /* 保留原图中的 XYLAB 字样，通过容器裁切隐藏左侧圆形图案。 */
+  background: url("/xylab-strikingly-logo-2026-10-05/logo-1-primary.png") calc(50% - 30px) center / 270px 135px no-repeat;
   color: transparent !important;
   font-size: 0 !important;
   line-height: 0;
@@ -684,8 +683,8 @@ a:hover {
   }
 
   .titlePre {
-    flex-basis: 190px;
-    width: 190px;
+    flex-basis: 135px;
+    width: 135px;
     height: 56px;
   }
 
@@ -715,10 +714,11 @@ a:hover {
   }
 
   .titlePre {
-    flex: 0 1 175px;
-    width: 175px;
+    flex: 0 1 120px;
+    width: 120px;
     height: 52px;
     background-size: 220px 110px;
+    background-position: calc(50% - 25px) center;
   }
 
   .dropdown-container {
@@ -865,10 +865,11 @@ a:hover {
 
 @media (max-width: 390px) {
   .titlePre {
-    flex-basis: 175px;
-    width: 175px;
+    flex-basis: 120px;
+    width: 120px;
     height: 46px;
     background-size: 240px 120px;
+    background-position: calc(50% - 25px) center;
   }
 
   .dropdown-button {
