@@ -4,11 +4,11 @@ const recruitmentText =
 const newsMarkup = `
   <p class="news-recruitment-host">${recruitmentText}</p>
   <article class="news-update">
-    <h4>· 2026:</h4>
+    <h4>· 2026-9:</h4>
     <p>New Paper! SpaMOAL, our deep learning method for accurate spatial domain identification from multi-omics data, was accepted for publication in <em>PLOS Biology</em> (CAS Q1).</p>
   </article>
   <article class="news-update">
-    <h4>· 2026:</h4>
+    <h4>· 2026-9:</h4>
     <p>New Paper! STRAND, our comprehensive subcellular-resolution spatial transcriptome RNA architecture and navigation database, was accepted for publication in <em>Nucleic Acids Research</em> (CAA Class A+, IF = 19.16).</p>
   </article>
   <article class="news-update">
