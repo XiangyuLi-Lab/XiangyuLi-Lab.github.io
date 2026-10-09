@@ -187,6 +187,35 @@ a:hover {
   color: var(--xylab-blue-dark) !important;
 }
 
+/* News: recruitment notice first, followed by a compact publication timeline. */
+.news-recruitment-host {
+  margin: 0 0 28px;
+  color: var(--xylab-blue-dark);
+  font-size: clamp(18px, 1.8vw, 22px);
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.news-update {
+  margin: 0 0 24px;
+  text-align: left;
+}
+
+.news-update h4 {
+  margin: 0 0 6px;
+  color: var(--xylab-ink);
+  font-family: "Lato", Arial, sans-serif;
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+.news-update p {
+  margin: 0 0 0 20px;
+  font-family: "Lato", Arial, sans-serif;
+  line-height: 1.65;
+}
+
 /* Home */
 /* 仅首页取消旧版正文偏移；下方内容仍保留原来的居中阅读宽度。 */
 #body:has(> .container) {

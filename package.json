@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build:home": "esbuild src/home/main.tsx --bundle --format=esm --platform=browser --jsx=automatic --minify --outfile=static/home/hero.js --define:process.env.NODE_ENV=\"\\\"production\\\"\"",
+    "build:news": "esbuild src/home/news.tsx --bundle --format=esm --platform=browser --jsx=automatic --minify --outfile=static/home/news.js --define:process.env.NODE_ENV=\"\\\"production\\\"\"",
     "build:activities": "esbuild src/activities/main.tsx --bundle --format=esm --platform=browser --jsx=automatic --minify --outfile=static/activities/carousel.js --define:process.env.NODE_ENV=\"\\\"production\\\"\"",
     "check:activities": "tsc --noEmit"
   },
