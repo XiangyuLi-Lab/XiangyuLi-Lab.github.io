@@ -2,15 +2,11 @@ var r="We are looking for creative and highly motivated students to join our gro
   <p class="news-recruitment-host">${r}</p>
   <article class="news-update">
     <h4>\xB7 2026-9:</h4>
-    <p>New Paper! SpaMOAL, our deep learning method for accurate spatial domain identification from multi-omics data, was accepted for publication in <em>PLOS Biology</em> (CAS Q1).</p>
+    <p>New Paper! SpaMOAL, our deep learning method for accurate spatial domain identification from multi-omics data, was accepted for publication in <em>PLOS Biology</em>.</p>
   </article>
   <article class="news-update">
     <h4>\xB7 2026-9:</h4>
-    <p>New Paper! STRAND, our comprehensive subcellular-resolution spatial transcriptome RNA architecture and navigation database, was accepted for publication in <em>Nucleic Acids Research</em> (CAA Class A+, IF = 19.16).</p>
-  </article>
-  <article class="news-update">
-    <h4>\xB7 2024-12:</h4>
-    <p>New Paper! CancerSRT, our spatially resolved transcriptomics database for human cancers, was published in the <em>Journal of Genetics and Genomics</em>.</p>
+    <p>New Paper! STRAND, our comprehensive subcellular-resolution spatial transcriptome RNA architecture and navigation database, was accepted for publication in <em>Nucleic Acids Research</em>.</p>
   </article>
 `,c=`
   <div class="title" data-publication-2026="spamoal" style="display: flex;">
@@ -27,8 +23,8 @@ var r="We are looking for creative and highly motivated students to join our gro
     <div class="content">
       Wu Z*, Huo Y*, Xu W*, <b>Li X<sup>#</sup></b>, Li T<sup>#</sup>(2026)
       <a href="https://strand.phasep.pro" target="_blank" rel="noopener noreferrer" class="title1">STRAND: A Comprehensive Subcellular-Resolved Spatial Transcriptome RNA Architecture and Navigation Database.</a>
-      Nucleic Acids Research.(CAA Class A+, IF = 19.16)
+      Nucleic Acids Research.(IF = 19.16)
     </div>
   </div>
   <br><br>
-`;function u(){let e=[],t=document.querySelector("#body > .news");t?.children[2]instanceof HTMLElement&&e.push(t.children[2]);let a=Array.from(document.querySelectorAll("#body > .container .titles")).find(n=>n.textContent?.trim()==="News")?.parentElement;return a?.children[2]instanceof HTMLElement&&e.push(a.children[2]),e}function s(){for(let t of u())t.dataset.newsUpdated!=="true"&&(t.innerHTML=l,t.dataset.newsUpdated="true");let e=document.querySelector("#publications .box > li");if(e&&e.dataset.publicationsUpdated!=="true"){let t=document.createElement("template");t.innerHTML=c;let i=e.getAttributeNames().filter(a=>a.startsWith("data-v-"));for(let a of t.content.querySelectorAll("*"))for(let n of i)a.setAttribute(n,"");e.prepend(t.content),e.dataset.publicationsUpdated="true"}}var o=document.getElementById("app");o&&(new MutationObserver(s).observe(o,{childList:!0,subtree:!0}),s());
+`;function u(){let e=[],t=document.querySelector("#body > .news");t?.children[2]instanceof HTMLElement&&e.push(t.children[2]);let a=Array.from(document.querySelectorAll("#body > .container .titles")).find(n=>n.textContent?.trim()==="News")?.parentElement;return a?.children[2]instanceof HTMLElement&&e.push(a.children[2]),e}function o(){for(let t of u())t.dataset.newsUpdated!=="true"&&(t.innerHTML=l,t.dataset.newsUpdated="true");let e=document.querySelector("#publications .box > li");if(e&&e.dataset.publicationsUpdated!=="true"){let t=document.createElement("template");t.innerHTML=c;let i=e.getAttributeNames().filter(a=>a.startsWith("data-v-"));for(let a of t.content.querySelectorAll("*"))for(let n of i)a.setAttribute(n,"");e.prepend(t.content),e.dataset.publicationsUpdated="true"}}var s=document.getElementById("app");s&&(new MutationObserver(o).observe(s,{childList:!0,subtree:!0}),o());

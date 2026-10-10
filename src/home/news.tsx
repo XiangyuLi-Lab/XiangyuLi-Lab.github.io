@@ -5,15 +5,11 @@ const newsMarkup = `
   <p class="news-recruitment-host">${recruitmentText}</p>
   <article class="news-update">
     <h4>· 2026-9:</h4>
-    <p>New Paper! SpaMOAL, our deep learning method for accurate spatial domain identification from multi-omics data, was accepted for publication in <em>PLOS Biology</em> (CAS Q1).</p>
+    <p>New Paper! SpaMOAL, our deep learning method for accurate spatial domain identification from multi-omics data, was accepted for publication in <em>PLOS Biology</em>.</p>
   </article>
   <article class="news-update">
     <h4>· 2026-9:</h4>
-    <p>New Paper! STRAND, our comprehensive subcellular-resolution spatial transcriptome RNA architecture and navigation database, was accepted for publication in <em>Nucleic Acids Research</em> (CAA Class A+, IF = 19.16).</p>
-  </article>
-  <article class="news-update">
-    <h4>· 2024-12:</h4>
-    <p>New Paper! CancerSRT, our spatially resolved transcriptomics database for human cancers, was published in the <em>Journal of Genetics and Genomics</em>.</p>
+    <p>New Paper! STRAND, our comprehensive subcellular-resolution spatial transcriptome RNA architecture and navigation database, was accepted for publication in <em>Nucleic Acids Research</em>.</p>
   </article>
 `;
 
@@ -32,7 +28,7 @@ const publicationsMarkup = `
     <div class="content">
       Wu Z*, Huo Y*, Xu W*, <b>Li X<sup>#</sup></b>, Li T<sup>#</sup>(2026)
       <a href="https://strand.phasep.pro" target="_blank" rel="noopener noreferrer" class="title1">STRAND: A Comprehensive Subcellular-Resolved Spatial Transcriptome RNA Architecture and Navigation Database.</a>
-      Nucleic Acids Research.(CAA Class A+, IF = 19.16)
+      Nucleic Acids Research.(IF = 19.16)
     </div>
   </div>
   <br><br>
